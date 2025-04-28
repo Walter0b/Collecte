@@ -1,0 +1,5 @@
+postgres_data/
+node_modules/
+.dockerignore
+.env
+.docker-compose.yml
