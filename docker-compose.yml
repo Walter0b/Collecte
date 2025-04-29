@@ -4,7 +4,14 @@ services:
     ports:
       - 8055:8055
     volumes:
-      - ./database:/directus/database
       - ./extensions:/directus/extensions
+    environment:
+      DB_CLIENT: ${DB_CLIENT}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_DATABASE: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_SSL: '{"rejectUnauthorized": false}'
     env_file:
       - .env
